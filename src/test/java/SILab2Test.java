@@ -11,7 +11,7 @@ public class SILab2Test {
     //allusers={krango, angela@gmail.com}{krango, krango@gmail.com}{angela, krango@gmail.com}
     ArrayList<User> users=new ArrayList<User>();
     @Test
-    public void everyPathTest(){
+    public void everyBranchTest(){
         //user=null allusers.size=0
         RuntimeException ex = assertThrows(RuntimeException.class, () -> SILab2.function(null, users));
         assertTrue(ex.getMessage().contains("Mandatory information missing!"));
