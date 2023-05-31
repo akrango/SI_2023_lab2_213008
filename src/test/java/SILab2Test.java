@@ -16,7 +16,6 @@ public class SILab2Test {
         RuntimeException ex = assertThrows(RuntimeException.class, () -> SILab2.function(null, users));
         assertTrue(ex.getMessage().contains("Mandatory information missing!"));
 
-
         //username=null, email=angela@gmail.com pass=pass, allusers.size=0
         assertFalse(SILab2.function(new User(null, "pass",  "angela@gmail.com"),
                 new ArrayList<User>(){}));
@@ -30,6 +29,10 @@ public class SILab2Test {
 
         //username=krango, email=angela@gmail.com pass=p@ssword, allusers.size=3
         assertFalse(SILab2.function(new User("krango", "p@ssword",  "angela@gmail.com"), users));
+
+        //username=krango, email=angela@gmail.com pass=password, allusers.size=3
+        assertFalse(SILab2.function(new User("krango", "password",  "angela@gmail.com"), users));
+
     }
 
     @Test
